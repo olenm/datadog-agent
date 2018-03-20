@@ -149,7 +149,7 @@ func getCheckLatestEvents(w http.ResponseWriter, r *http.Request) {
 }
 
 func getPodMetadata(w http.ResponseWriter, r *http.Request) {
-	if err := apiutil.Validate(w, r); err != nil {
+	if err := apiutil.ValidateDCARequest(w, r); err != nil {
 		return
 	}
 	vars := mux.Vars(r)

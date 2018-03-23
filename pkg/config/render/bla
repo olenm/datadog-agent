@@ -1,0 +1,49 @@
+##### Dogstatsd
+# Dogstatsd enables you to submit custom metrics, via UDP or Unix Sockets
+#####
+#
+# Run Dogstatsd for custom metrics + JMX
+# use_dogstatsd: true
+#
+# UDP port Dogstatsd will listen to (0 to disable)
+# dogstatsd_port: 8125
+#
+# Whether dogstatsd should listen to UDP traffic on all interfaces
+# dogstatsd_non_local_traffic: false
+#
+# If dogstatsd_non_local_traffic is disabled, host to bind to
+# bind_host: localhost
+#
+# The buffer size use to receive statsd packet, in bytes.
+# Adjust accordingly to your client-side buffering settings.
+# dogstatsd_buffer_size: 8192
+#
+# Path of the Unix Socket to listen to (empty string to disable)
+# dogstatsd_socket: 
+#
+# Enable origin detection and container tagging for Unix Socket traffic
+# dogstatsd_origin_detection: false
+#
+# Prefix to add to all custom metric names
+# statsd_metric_namespace: 
+#
+# Dogstatsd can forward every packet received to another statsd server.
+# WARNING: Make sure that forwarded packets are regular statsd packets and not \"dogstatsd\" packets,
+# as your other statsd server might not be able to handle them.
+# statsd_forward_host: 
+#
+# Port to forward all incomping statsd packets to
+# statsd_forward_port: 0
+#
+# Duration idle counters are kept before expiring
+# dogstatsd_expiry_seconds: 300
+#
+# Publish internal stats as Go epxvars
+# dogstatsd_stats_enable: false
+#
+# The port to expose stats to
+# dogstatsd_expiry_seconds: 5000
+#
+# How many stat batches to keep in memory
+# dogstatsd_stats_buffer: 10
+#
